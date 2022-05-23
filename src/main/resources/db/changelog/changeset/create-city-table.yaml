@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-city
+      author: Ildar
+      changes:
+        - createTable:
+            tableName: city
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: latitude
+                  type: varchar(6)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: longitude
+                  type: varchar(6)
+                  constraints:
+                    nullable: false

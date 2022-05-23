@@ -1,0 +1,5 @@
+databaseChangeLog: #параметр в котором находятся миграции
+  - include: # список активных миграций
+      file: db/changelog/changeset/create-city-table.yaml # путь к файлу миграции
+  - include: # список активных миграций
+      file: db/changelog/changeset/create-distance-table.yaml # путь к файлу миграции

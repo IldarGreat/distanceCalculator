@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-distance
+      author: Ildar
+      changes:
+        - createTable:
+            tableName: distance
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: from_city
+                  type: int
+                  constraints:
+                    foreignKeyName: from_city
+                    referencedTableName: city
+                    referencedColumnNames: id
+                    nullable: false
+              - column:
+                  name: to_city
+                  type: int
+                  constraints:
+                    foreignKeyName: to_city
+                    referencedTableName: city
+                    referencedColumnNames: id
+                    nullable: false
+              - column:
+                  name: distance
+                  type: double
+                  constraints:
+                    nullable: false
