@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import ru.ildar_technology.task.domain.XmlStorage;
-import ru.ildar_technology.task.exception.FileStorageException;
+import ru.ildar_technology.task.exception.custom.FileStorageException;
 
 import javax.xml.bind.*;
 import java.io.File;

@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.ildar_technology.task.domain.City;
 import ru.ildar_technology.task.domain.Distance;
-import ru.ildar_technology.task.exception.NoSuchEntityException;
+import ru.ildar_technology.task.exception.custom.NoSuchEntityException;
 import ru.ildar_technology.task.repository.DistanceRepository;
 
 

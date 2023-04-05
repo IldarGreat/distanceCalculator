@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
-import ru.ildar_technology.task.exception.FileStorageException;
+import ru.ildar_technology.task.exception.custom.FileStorageException;
 import ru.ildar_technology.task.property.FileStorageProperties;
 
 import java.io.IOException;

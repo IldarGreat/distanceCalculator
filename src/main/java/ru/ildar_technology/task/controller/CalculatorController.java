@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.*;
 import ru.ildar_technology.task.calculator.Calculator;
 import ru.ildar_technology.task.domain.City;
 import ru.ildar_technology.task.domain.Distance;
-import ru.ildar_technology.task.exception.NoSuchEntityException;
-import ru.ildar_technology.task.exception.NoSuchTypeException;
+import ru.ildar_technology.task.exception.custom.NoSuchEntityException;
+import ru.ildar_technology.task.exception.custom.NoSuchTypeException;
 import ru.ildar_technology.task.repository.CityRepository;
 
 

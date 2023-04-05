@@ -1,4 +1,4 @@
-package ru.ildar_technology.task.exception;
+package ru.ildar_technology.task.exception.custom;
 
 public class NoSuchTypeException extends RuntimeException{
     public NoSuchTypeException() {

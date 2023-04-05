@@ -4,6 +4,7 @@ package ru.ildar_technology.task.exception;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ru.ildar_technology.task.exception.custom.JsonExceptionMessage;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
