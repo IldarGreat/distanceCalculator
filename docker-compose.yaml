@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  web:
+    container_name: calculator
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/distance
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+  db:
+    image: postgres:latest
+    container_name: db
+    ports:
+      - "6541:5432"
+    environment:
+      - POSTGRES_DB=calculator
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+    restart: unless-stopped
