@@ -3,9 +3,9 @@ spring:
     enabled: true
     change-log: classpath:/db/changelog/db.changelog-master.yaml
   datasource:
-    url: ds
-    username: dsa
-    password: das
+    url: mysql://${PROD_DB_USERNAME}:${PROD_DB_PASSWORD}@${PROD_DB_HOST}:${PROD_DB_PORT}/${PROD_DB_NAME}
+    username: ${PROD_DB_USERNAME}
+    password: ${PROD_DB_PASSWORD}
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
