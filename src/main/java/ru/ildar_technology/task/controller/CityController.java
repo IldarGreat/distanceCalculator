@@ -1,9 +1,11 @@
 package ru.ildar_technology.task.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-import ru.ildar_technology.task.domain.City;
-import ru.ildar_technology.task.repository.CityRepository;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import ru.ildar_technology.task.model.dto.CityDto;
+import ru.ildar_technology.task.service.interfaces.CityService;
 
 import java.util.List;
 
@@ -11,12 +13,15 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 public class CityController {
-    @Autowired
-    private CityRepository cityRepository;
+    private final CityService cityService;
+
+    public CityController(CityService cityService) {
+        this.cityService = cityService;
+    }
 
     @GetMapping("/cities")
-    public List<City> getCities() {
-        return cityRepository.findAll();
+    public ResponseEntity<List<CityDto>> getCities() {
+        return ResponseEntity.ok(cityService.getCities());
     }
 
 }

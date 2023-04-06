@@ -1,6 +1,6 @@
 package ru.ildar_technology.task.service;
 
-import ru.ildar_technology.task.domain.Storage;
+import ru.ildar_technology.task.service.xml.Storage;
 
 import javax.xml.bind.JAXBException;
 
