@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-distance-table
+      author: Ildar
+      changes:
+        - insert:
+            tableName: distance
+            columns:
+              - column:
+                  name: from_city
+                  value: 1
+              - column:
+                  name: to_city
+                  value: 2
+              - column:
+                  name: distance
+                  value: 860
+        - insert:
+            tableName: distance
+            columns:
+              - column:
+                  name: from_city
+                  value: 1
+              - column:
+                  name: to_city
+                  value: 3
+              - column:
+                  name: distance
+                  value: 9244
+        - insert:
+            tableName: distance
+            columns:
+              - column:
+                  name: from_city
+                  value: 2
+              - column:
+                  name: to_city
+                  value: 3
+              - column:
+                  name: distance
+                  value: 8546

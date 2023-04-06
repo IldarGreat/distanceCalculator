@@ -1,12 +1,14 @@
-package ru.ildar_technology.task.service;
+package ru.ildar_technology.task.service.xml;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import ru.ildar_technology.task.exception.custom.FileStorageException;
+import ru.ildar_technology.task.service.FileStorageParser;
+import ru.ildar_technology.task.service.FileStorageService;
 
-import ru.ildar_technology.task.domain.XmlStorage;
-import ru.ildar_technology.task.exception.FileStorageException;
-
-import javax.xml.bind.*;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
 import java.io.File;
 
 @Service

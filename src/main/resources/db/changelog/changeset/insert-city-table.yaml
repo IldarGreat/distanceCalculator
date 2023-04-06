@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-city-table
+      author: Ildar
+      changes:
+        - insert:
+            tableName: city
+            columns:
+              - column:
+                  name: name
+                  value: Moscow
+              - column:
+                  name: latitude
+                  value: 55.44N
+              - column:
+                  name: longitude
+                  value: 37.36E
+        - insert:
+            tableName: city
+            columns:
+              - column:
+                  name: name
+                  value: Samara
+              - column:
+                  name: latitude
+                  value: 53.20N
+              - column:
+                  name: longitude
+                  value: 50.15E
+        - insert:
+            tableName: city
+            columns:
+              - column:
+                  name: name
+                  value: Washington
+              - column:
+                  name: latitude
+                  value: 38.53N
+              - column:
+                  name: longitude
+                  value: 77.20W

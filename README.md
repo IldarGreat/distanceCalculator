@@ -2,7 +2,8 @@
 
 ## About 
 
-Rest service that calculates the distance between two cities
+Rest service that calculates the distance between two cities <br>
+Open API doc placed at http://localhost:8080/swagger-ui/index.html
 
 HTTP Method | EndPoint | Description  
 --- | --- | ---  
