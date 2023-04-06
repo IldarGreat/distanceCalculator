@@ -3,7 +3,6 @@
 ## About 
 
 Rest service that calculates the distance between two cities <br>
-Open API doc placed at http://localhost:8080/swagger-ui/index.html
 
 HTTP Method | EndPoint | Description  
 --- | --- | ---  
@@ -60,19 +59,29 @@ The type can be Crowflight or Distance Matrix
 ```
 
 ### Technologies in the project
-* Spring Boot + Tomcat
+* Spring Boot 2.7.4
 * Maven
 * JAXB
-* MySQL
+* MySQL (remote)
+* Postgresql (local)
 * Liqubase
-* Git
+* Git(of course)
+* Testcontainers
+* Docker
+* Java 17 (for records)
 
 
-## Before building the project, change the file.upload-dir in apllication.properties ! This variable tells where to save the data of the xml dataset file!
+## Build and run in local environment
 
-### Installation and launch
+### Up from docker compose file
+```xml
+docker compose up
+```
+
+### Or build and launch with maven
 ```xml
 mvn clean install
 cd target
 javac -jar Test_Task-0.0.1-SNAPSHOT.war
 ```
+#### Open API doc will be placed at http://localhost:8080/swagger-ui/index.html
