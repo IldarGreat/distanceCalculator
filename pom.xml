@@ -19,7 +19,7 @@
         <springdoc.version>1.6.11</springdoc.version>
         <testcontainers.version>1.17.4</testcontainers.version>
         <mapstruct.version>1.5.2.Final</mapstruct.version>
-        <liqubase.version>4.3.5</liqubase.version>
+        <liqubase.version>4.8.0</liqubase.version>
         <lombook.version>1.18.26</lombook.version>
         <testcontainers.version>1.17.4</testcontainers.version>
         <mysql.driver.version>8.0.29</mysql.driver.version>
