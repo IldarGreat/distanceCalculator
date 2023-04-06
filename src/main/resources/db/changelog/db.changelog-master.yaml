@@ -3,3 +3,7 @@ databaseChangeLog:
       file: db/changelog/changeset/create-city-table.yaml
   - include:
       file: db/changelog/changeset/create-distance-table.yaml
+  - include:
+      file: db/changelog/changeset/insert-city-table.yaml
+  - include:
+      file: db/changelog/changeset/insert-distance-table.yaml
