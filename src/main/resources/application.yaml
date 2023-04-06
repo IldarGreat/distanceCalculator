@@ -1,21 +1,11 @@
+server:
+  port: 8080
+
 spring:
-  liquibase:
-    enabled: true
-    change-log: classpath:/db/changelog/db.changelog-master.yaml
-  datasource:
-    url: ds
-    username: dsa
-    password: das
-  jpa:
-    database-platform: org.hibernate.dialect.MySQL8Dialect
-    hibernate:
-      ddl-auto: none
-  servlet:
-    multipart:
-      enabled: true
-      file-size-threshold: 2KB
-      max-file-size: 200MB
-      max-request-size: 215MB
+  application:
+    name: distance-calculator
+  profiles:
+    active: local
 
 file:
   upload-dir: D:\\SpringMVC\\Test_Task\\src\\main\\resources
