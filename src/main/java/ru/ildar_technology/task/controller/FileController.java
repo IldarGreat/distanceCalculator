@@ -1,5 +1,7 @@
 package ru.ildar_technology.task.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,6 +14,7 @@ import ru.ildar_technology.task.service.interfaces.DistanceService;
 
 @RestController
 @RequestMapping("/api")
+@Tag(name = "File")
 public class FileController {
 
     private final DistanceService distanceService;
@@ -21,6 +24,7 @@ public class FileController {
     }
 
     @PostMapping("/uploadFile")
+    @Operation(summary = "Позволяет загрузить, затем спарсить загруженный файл и залить его в бд")
     public ResponseEntity<Void> uploadFile(@RequestParam("file") MultipartFile file) {
         distanceService.saveAll(file);
         return new ResponseEntity<>(HttpStatus.OK);
