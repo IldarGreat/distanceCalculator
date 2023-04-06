@@ -3,6 +3,7 @@ package ru.ildar_technology.task.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+import ru.ildar_technology.task.exception.custom.NoSuchEntityException;
 import ru.ildar_technology.task.model.domain.City;
 import ru.ildar_technology.task.model.domain.Distance;
 import ru.ildar_technology.task.repository.CityRepository;
@@ -32,18 +33,13 @@ public class DistanceServiceImpl implements DistanceService {
             System.out.println(unmarshData);
             cityRepository.saveAll(unmarshData.getCityList());
             List<Distance> distanceList = unmarshData.getDistanceList();
-            List<City> toCityList = new ArrayList<>();
-            List<City> fromCityList = new ArrayList<>();
-            List<City> cities = cityRepository.findAll();
             for (Distance distance : distanceList) {
-                toCityList.add(distance.getToCity());
-                fromCityList.add(distance.getFromCity());
+                City toCity = cityRepository.findByName(distance.getToCity().getName()).orElseThrow(NoSuchEntityException::new);
+                City fromCity = cityRepository.findByName(distance.getFromCity().getName()).orElseThrow(NoSuchEntityException::new);
+                distance.setToCity(toCity);
+                distance.setFromCity(fromCity);
             }
-            for (City city : cities) {
-
-            }
-            //  distanceRepository.saveAll(unmarshData.getDistanceList());
-
+            distanceRepository.saveAll(distanceList);
         } catch (IOException | JAXBException e) {
             throw new RuntimeException(e);
         }

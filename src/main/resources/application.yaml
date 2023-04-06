@@ -8,4 +8,4 @@ spring:
     active: local
 
 file:
-  upload-dir: D:\\SpringMVC\\Test_Task\\src\\main\\resources
+  upload-dir: src\\main\\resources

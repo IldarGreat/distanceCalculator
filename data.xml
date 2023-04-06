@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<data_set>
+    <cities>
+        <city>
+            <name>Novosibirsk</name>
+            <latitude>55.04N</latitude>
+            <longitude>82.93E</longitude>
+        </city>
+        <city>
+            <name>Munchen</name>
+            <latitude>48.13N</latitude>
+            <longitude>11.57E</longitude>
+        </city>
+    </cities>
+    <distances>
+        <distance>
+            <fromCity>
+                <name>Novosibirsk</name>
+            	<latitude>55.04N</latitude>
+            	<longitude>82.93E</longitude>
+            </fromCity>
+            <toCity>
+                <name>Munchen</name>
+            	<latitude>48.13N</latitude>
+            	<longitude>11.57E</longitude>
+            </toCity>
+            <distance>4759.2</distance>
+        </distance>
+    </distances>
+</data_set>

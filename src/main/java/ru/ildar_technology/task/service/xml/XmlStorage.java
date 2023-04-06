@@ -6,10 +6,7 @@ import lombok.NoArgsConstructor;
 import ru.ildar_technology.task.model.domain.City;
 import ru.ildar_technology.task.model.domain.Distance;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.*;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,6 +15,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@XmlAccessorType(XmlAccessType.FIELD)
 public class XmlStorage implements Storage {
     @XmlElementWrapper(name = "cities")
     @XmlElement(name = "city")
