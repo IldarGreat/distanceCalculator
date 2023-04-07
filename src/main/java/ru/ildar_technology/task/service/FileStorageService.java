@@ -26,11 +26,10 @@ public class FileStorageService {
         }
     }
 
-    public Boolean storeFile(MultipartFile file) throws IOException {
+    public void storeFile(MultipartFile file) throws IOException {
         fileName = StringUtils.cleanPath(Objects.requireNonNull(file.getOriginalFilename()));
         Path targetLocation = this.fileStorageLocation.resolve(fileName);
         Files.copy(file.getInputStream(), targetLocation, StandardCopyOption.REPLACE_EXISTING);
-        return true;
     }
 
     public static String getFileName() {

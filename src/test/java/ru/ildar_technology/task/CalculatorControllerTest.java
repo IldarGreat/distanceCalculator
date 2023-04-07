@@ -18,9 +18,6 @@ public class CalculatorControllerTest extends BaseApplicationTest {
         mockMvc.perform(get("/api/calculate/" + otherType + "/" + fromCityName + "/" + toCityName))
                 .andExpect(status().is(200));
 
-        String notExistingType = "dsadsa";
-        mockMvc.perform(get("/api/calculate/" + otherType + "/" + fromCityName + "/" + toCityName))
-                .andExpect(status().is(200));
     }
 
     @Test

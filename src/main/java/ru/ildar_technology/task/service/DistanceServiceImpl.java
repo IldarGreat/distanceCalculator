@@ -13,7 +13,6 @@ import ru.ildar_technology.task.service.xml.Storage;
 
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -43,10 +42,5 @@ public class DistanceServiceImpl implements DistanceService {
         } catch (IOException | JAXBException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    @Override
-    public void saveAll(List<Distance> distances) {
-
     }
 }

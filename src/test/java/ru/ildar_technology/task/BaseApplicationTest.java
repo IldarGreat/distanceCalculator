@@ -19,7 +19,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 public abstract class BaseApplicationTest {
 
     @Container
-    public static PostgreSQLContainer<?> POSTGRES = new PostgreSQLContainer<>
+    public static final PostgreSQLContainer<?> POSTGRES = new PostgreSQLContainer<>
             ("postgres:latest")
             .withDatabaseName("testDB")
             .withUsername("user")
